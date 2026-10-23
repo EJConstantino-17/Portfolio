@@ -1,0 +1,61 @@
+﻿.portfolio {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 16px;
+    color: #172033;
+}
+
+.intro {
+    margin-bottom: 40px;
+}
+
+.eyebrow {
+    color: #4f46e5;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.intro h1 {
+    margin-bottom: 12px;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 800;
+}
+
+.intro h2 {
+    font-size: 1.4rem;
+    color: #4b5563;
+}
+
+.intro > p:last-child {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.card-section {
+    margin-bottom: 24px;
+    padding: 28px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+    .card-section h2 {
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .tags li {
+        padding: 8px 16px;
+        background: #e0e7ff;
+        color: #3730a3;
+        border-radius: 999px;
+    }

@@ -1,6 +1,34 @@
-﻿@{
+﻿@model ConstantinoViewModel
+
+@{
 	ViewData["Title"] = "Constantino's Portfolio";
 }
 
-<h1>Eduardo D. Constantino III</h1>
-<p>This is my portfolio</p>
+<div class="constantino">
+	<section class="intro">
+		<p class="eyebrow">MY PORTFOLIO</p>
+		<h1>@Model.Name</h1>
+		<h2>@Model.HeadLine</h2>
+		<p>@Model.ShortIntro</p>
+	</section>
+
+	<section class="card-section">
+		<h3>Skills</h3>
+		<ul class="tags">
+			@foreach (var skill in Model.Skills)
+			{
+				<li>@skill</li>
+			}
+		</ul>
+	</section>
+
+	<section class="card-section">
+		<h3>Hobbies</h3>
+		<ul class="tags">
+			@foreach (var hobby in Model.Hobbies)
+			{
+				<li>@hobby</li>
+			}
+		</ul>
+	</section>
+</div>
