@@ -10,7 +10,7 @@ namespace Portfolio.Controllers
             var portfolio = new ConstantinoViewModel
             {
                 Name = "Eduardo D. Constantino III",
-                HeadLine = "CS Student | Aspiring Low Level System Engineer",
+                HeadLine = "CS Student | Aspiring Systems Engineer",
                 ShortIntro = "I am a Computer Science student who enjoys building software that solves practical problems. My interests include systems programming in C, game development and full-stack web development. I focus on writing clear, maintainable code, and I enjoy figuring out how things work and improving what I build.",
                 Hobbies = new List<string> { "Coding", "Gaming", "Music", "Chess" },
                 Email = "ej.constantino.17@gmail.com",

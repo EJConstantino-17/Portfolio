@@ -36,10 +36,41 @@ body.constantino-page {
 }
 
     body.constantino-page footer {
+        background-color: #111111;
         color: #b8b8b8 !important;
         border-top-color: #333333 !important;
     }
 
-    body.constantino-page footer a {
-        color: #f5f5f5;
+        body.constantino-page footer a {
+            color: #f5f5f5;
+        }
+
+    body.constantino-page .navbar {
+        background-color: #171717 !important;
+        border-bottom-color: #333333 !important;
+    }
+
+        body.constantino-page .navbar-brand,
+        body.constantino-page .navbar .nav-link {
+            color: #e5e5e5 !important;
+        }
+
+            body.constantino-page .navbar .nav-link:hover {
+                color: #ffffff !important;
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+
+    body.constantino-page .navbar-toggler {
+        border-color: #777777;
+    }
+
+    body.constantino-page .navbar-toggler-icon {
+        filter: invert(1);
+    }
+
+    body.constantino-page .navbar a:focus-visible,
+    body.constantino-page .navbar button:focus-visible {
+        outline: 2px solid #f5f5f5;
+        outline-offset: 4px;
     }
