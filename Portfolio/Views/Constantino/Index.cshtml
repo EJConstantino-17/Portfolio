@@ -2,17 +2,52 @@
 
 @{
 	ViewData["Title"] = "Constantino's Portfolio";
+	ViewData["BodyClass"] = "constantino-page";
 }
 
 <div class="constantino">
-	<section class="intro">
-		<p class="eyebrow">MY PORTFOLIO</p>
-		<h1>@Model.Name</h1>
-		<h2>@Model.HeadLine</h2>
-		<p>@Model.ShortIntro</p>
+	<section class="hero">
+		<div class="intro">
+			<p class="eyebrow">MY PORTFOLIO</p>
+			<h1>@Model.Name</h1>
+			<h2>@Model.HeadLine</h2>
+			<p class="bio">@Model.ShortIntro</p>
+
+			<a class="skills-link" href="#skills">
+				Explore my skills →
+			</a>
+			<div class="social-links">
+				@if (!string.IsNullOrWhiteSpace(Model.Email))
+				{
+					<span class="email-text">Email: @Model.Email</span>
+				}
+
+				@if (!string.IsNullOrWhiteSpace(Model.GitHubUrl))
+				{
+					<a href="@Model.GitHubUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						GitHub
+					</a>
+				}
+
+				@if (!string.IsNullOrWhiteSpace(Model.LinkedInUrl))
+				{
+					<a href="@Model.LinkedInUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						LinkedIn
+					</a>
+				}
+			</div>
+		</div>
+
+		<div class="photo">
+			<img src="@Url.Content("~/images/Constantino.jpg")" alt="Photo of @Model.Name" />
+		</div>
 	</section>
 
-	<section class="card-section">
+	<section id="skills" class="card-section">
 		<h3>Skills</h3>
 		<ul class="tags">
 			@foreach (var skill in Model.Skills)
