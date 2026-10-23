@@ -47,6 +47,38 @@
 		</div>
 	</section>
 
+	<section id="projects" class="projects-section">
+		<h2>Projects</h2>
+		<p class="section-intro">
+			Personal projects where I explore systems programming
+			and game development.
+		</p>
+
+		<div class="project-grid">
+			@foreach (var project in Model.Projects)
+			{
+				<article class="project-card">
+					<h3>@project.Title</h3>
+					<p>@project.Description</p>
+
+					<ul class="tags">
+						@foreach (var technology in project.Technologies)
+						{
+							<li>@technology</li>
+						}
+					</ul>
+
+					<a class="project-link"
+					   href="@project.GitHubUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						View on GitHub
+					</a>
+				</article>
+			}
+		</div>
+	</section>
+
 	<section id="skills" class="card-section">
 		<h3>Skills</h3>
 		<ul class="tags">

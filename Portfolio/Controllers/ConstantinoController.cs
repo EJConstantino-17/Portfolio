@@ -16,7 +16,24 @@ namespace Portfolio.Controllers
                 Skills = new List<string> { "C", "Python", "JavaScript", "React", "NodeJS", "ExpressJS", "C#", "ASP.NET Core MVC" },
                 Email = "ej.constantino.17@gmail.com",
                 GitHubUrl = "https://github.com/EJConstantino-17",
-                LinkedInUrl = "https://www.linkedin.com/in/ej-constantino-03993942a/"
+                LinkedInUrl = "https://www.linkedin.com/in/ej-constantino-03993942a/",
+                Projects =
+                {
+                    new ConstantinoProjectViewModel
+                    {
+                        Title = "Chess Engine",
+                        Description = "A chess engine built primarily in C, featuring bitboard move generation, iterative-deepening search, and alpha-beta pruning. Supports UCI-compatible chess interfaces and includes diagnostic tools for testing move generation and search behavior.",
+                        Technologies = new List<string> { "C", "C++", "UCI"},
+                        GitHubUrl = "https://github.com/EJConstantino-17/Chess-Engine"
+                    },
+                    new ConstantinoProjectViewModel
+                    {
+                        Title = "Tetris Game",
+                        Description = "A Java desktop Tetris game featuring a 7-bag randomizer, piece holding, upcoming-piece previews, and progressive difficulty. Organizes gameplay logic, rendering, and input handling into separate components.",
+                        Technologies = new List<string> { "Java", "Swing" },
+                        GitHubUrl = "https://github.com/EJConstantino-17/TetrisGame"
+                    }
+                }
             };
             return View(portfolio);
         }
