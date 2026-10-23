@@ -19,7 +19,11 @@
 			<div class="social-links">
 				@if (!string.IsNullOrWhiteSpace(Model.Email))
 				{
-					<span class="email-text">Email: @Model.Email</span>
+					<a href="@Model.Email"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						Email
+					</a>
 				}
 
 				@if (!string.IsNullOrWhiteSpace(Model.GitHubUrl))
@@ -43,7 +47,7 @@
 		</div>
 
 		<div class="photo">
-			<img src="@Url.Content("~/images/Constantino.jpg")" alt="Photo of @Model.Name" />
+			<img src="@Url.Content("~/images/Constantino-no-bg.png")" alt="Photo of @Model.Name" />
 		</div>
 	</section>
 
