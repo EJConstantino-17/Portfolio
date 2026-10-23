@@ -7,7 +7,9 @@
         public string HeadLine { get; set; } = "";
         public string ShortIntro { get; set; } = "";
 
-        public List<string> Skills { get; set; } = new();
+        public List<string> Languages { get; set; } = new();
+        public List<string> WebDevelopment { get; set; } = new();
+        public List<string> Tools { get; set; } = new();
         public List<string> Hobbies { get; set; } = new();
 
         public string Email { get; set; } = "";

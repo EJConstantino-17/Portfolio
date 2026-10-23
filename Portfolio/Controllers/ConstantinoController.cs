@@ -13,10 +13,32 @@ namespace Portfolio.Controllers
                 HeadLine = "CS Student | Aspiring Low Level System Engineer",
                 ShortIntro = "I am a Computer Science student who enjoys building software that solves practical problems. My interests include systems programming in C, game development and full-stack web development. I focus on writing clear, maintainable code, and I enjoy figuring out how things work and improving what I build.",
                 Hobbies = new List<string> { "Coding", "Gaming", "Music", "Chess" },
-                Skills = new List<string> { "C", "Python", "JavaScript", "React", "NodeJS", "ExpressJS", "C#", "ASP.NET Core MVC" },
                 Email = "ej.constantino.17@gmail.com",
                 GitHubUrl = "https://github.com/EJConstantino-17",
                 LinkedInUrl = "https://www.linkedin.com/in/ej-constantino-03993942a/",
+                Languages = new List<string>
+                {
+                    "C",
+                    "Java",
+                    "JavaScript",
+                    "C#",
+                    "Python"
+                },
+                WebDevelopment = new List<string>
+                {
+                    "HTML",
+                    "CSS",
+                    "React",
+                    "Node.js",
+                    "Express.js",
+                    "ASP.NET Core MVC"
+                },
+                Tools = new List<string>
+                {
+                    "Git",
+                    "GitHub",
+                    "Visual Studio"
+                },
                 Projects =
                 {
                     new ConstantinoProjectViewModel
