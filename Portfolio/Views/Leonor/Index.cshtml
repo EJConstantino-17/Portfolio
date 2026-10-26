@@ -1,0 +1,67 @@
+@model Portfolio.Models.LeonorViewModel
+
+@{
+    ViewData["Title"] = "Leonor Portfolio";
+}
+
+<div class="bgcolor py-5">
+    <div class="container-fluid" style="padding-left: 10%; padding-right: 10%;">
+       <div class="row align-items-center">
+            
+        
+            <div class="col-md-7 pe-md-5">
+                <h1 class="hey">Hey, I'm @Model.Name.Split(' ')[0]</h1>
+                <p class="fs-5" style="white-space: pre-line; font-family: Georgia, serif; line-height: 1.7;">@Model.Bio</p>
+
+                
+                <div class="mt-5">
+                    <h4 class="fst-italic fw-bold text-dark mb-3" style="font-family: Georgia, serif;">My Hobbies</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach (var hobby in Model.Hobbies)
+                        {
+                            <span class="badge bg-white text-dark border rounded-pill shadow-sm px-3 py-2 fw-normal fs-6">
+                                @hobby
+                            </span>
+                        }
+                    </div>
+                </div>
+
+               
+                <div class="mt-5">
+                    <h4 class="fst-italic fw-bold text-dark mb-3" style="font-family: Georgia, serif;">Languages</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach (var lang in Model.Languages)
+                        {
+                            <span class="badge bg-white text-dark border rounded-pill shadow-sm px-3 py-2 fw-normal fs-6">
+                                <strong class="fw-bold">@lang.Name</strong> — @lang.Proficiency
+                            </span>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-5 text-center">
+                <img src="/images/Leonor.png" alt="Lance Profile Picture" class="img-fluid rounded-4 border shadow-sm" style="max-height: 350px; margin-left: -50px;">
+
+                <div class="mt-3" style="margin-left: -50px;">
+                    <h3 class="fw-bold m-0" style="font-family: Georgia, serif;">@Model.Name</h3>
+                    <p class="text-muted fst-italic fs-6">@Model.Status</p>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="mt-5 pt-4 border-top border-secondary-subtle">
+            <h5 class="fw-bold text-dark mb-3" style="font-family: Georgia, serif;">Contact</h5>
+            <div class="row row-cols-1 row-cols-md-2 g-3 fs-6">
+                <div class="col">📧 Email: <a href="mailto:@Model.Contact.Email" class="text-primary text-decoration-none border-bottom pb-1">@Model.Contact.Email</a></div>
+                <div class="col">📱 Phone: <span class="text-dark">@Model.Contact.Phone</span></div>
+                <div class="col">📍 Location: <span class="text-dark">@Model.Contact.Location</span></div>
+                <div class="col">🐙 GitHub: <a href="@Model.Contact.GitHub" target="_blank" class="text-primary text-decoration-none border-bottom pb-1">@Model.Contact.GitHub</a></div>
+            </div>
+        </div>
+
+    </div>
+</div>
