@@ -1,0 +1,125 @@
+﻿@model ConstantinoViewModel
+
+@{
+	ViewData["Title"] = "Constantino's Portfolio";
+	ViewData["BodyClass"] = "constantino-page";
+}
+
+<div class="constantino">
+	<section class="hero">
+		<div class="intro">
+			<p class="eyebrow">MY PORTFOLIO</p>
+			<h1>@Model.Name</h1>
+			<h2>@Model.HeadLine</h2>
+			<p class="bio">@Model.ShortIntro</p>
+
+			<a class="skills-link" href="#skills">
+				Explore my skills →
+			</a>
+			<div class="social-links">
+				@if (!string.IsNullOrWhiteSpace(Model.Email))
+				{
+					<a href="mailto:@Model.Email">Email &#x2197;&#xFE0E</a>
+				}
+
+				@if (!string.IsNullOrWhiteSpace(Model.GitHubUrl))
+				{
+					<a href="@Model.GitHubUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						GitHub &#x2197;&#xFE0E
+					</a>
+				}
+
+				@if (!string.IsNullOrWhiteSpace(Model.LinkedInUrl))
+				{
+					<a href="@Model.LinkedInUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						LinkedIn &#x2197;&#xFE0E
+					</a>
+				}
+			</div>
+		</div>
+
+		<div class="photo">
+			<img src="@Url.Content("~/images/Constantino-no-bg.png")" alt="Photo of @Model.Name" />
+		</div>
+	</section>
+
+	<section id="projects" class="projects-section">
+		<h2>Projects</h2>
+		<p class="section-intro">
+			Personal projects where I explore systems programming
+			and game development.
+		</p>
+
+		<div class="project-grid">
+			@foreach (var project in Model.Projects)
+			{
+				<article class="project-card">
+					<h3>@project.Title</h3>
+					<p>@project.Description</p>
+
+					<ul class="tags">
+						@foreach (var technology in project.Technologies)
+						{
+							<li>@technology</li>
+						}
+					</ul>
+
+					<a class="project-link"
+					   href="@project.GitHubUrl"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						View on GitHub &#x2197;&#xFE0E
+					</a>
+				</article>
+			}
+		</div>
+	</section>
+
+	<section id="skills" class="card-section">
+		<h2>Skills</h2>
+
+		<div class="skill-group">
+			<h3>Languages</h3>
+			<ul class="tags">
+				@foreach (var language in Model.Languages)
+				{
+					<li>@language</li>
+				}
+			</ul>
+		</div>
+
+		<div class="skill-group">
+			<h3>Web Development</h3>
+			<ul class="tags">
+				@foreach (var technology in Model.WebDevelopment)
+				{
+					<li>@technology</li>
+				}
+			</ul>
+		</div>
+
+		<div class="skill-group">
+			<h3>Tools</h3>
+			<ul class="tags">
+				@foreach (var tool in Model.Tools)
+				{
+					<li>@tool</li>
+				}
+			</ul>
+		</div>
+	</section>
+
+	<section class="card-section">
+		<h2>Hobbies</h2>
+		<ul class="tags">
+			@foreach (var hobby in Model.Hobbies)
+			{
+				<li>@hobby</li>
+			}
+		</ul>
+	</section>
+</div>
