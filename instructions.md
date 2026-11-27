@@ -49,10 +49,10 @@ For later commits on the same branch, use `git push`.
 
 On GitHub, open **Pull requests → New pull request**. **Base** receives the changes; **compare** supplies them.
 
-| Step | Base | Compare | Purpose |
-| --- | --- | --- | --- |
-| Feature → development | `dev` | `feature/<name>` | Integrate completed work |
-| Development → testing | `test` | `dev` | Verify integrated features |
-| Testing → staging | `stage` | `test` | Check release readiness |
-| Staging → release | `release` | `stage` | Approve the release candidate |
-| Release → production | `main` | `release` | Publish production-ready code |
+| Step                  | Base      | Compare          | Purpose                       |
+| ---                   | ---       | ---              | ---                           |
+| Feature → development | `dev`     | `feature/<name>` | Integrate completed work      |
+| Development → testing | `test`    | `dev`            | Verify integrated features    |
+| Testing → staging     | `stage`   | `test`           | Check release readiness       |
+| Staging → release     | `release` | `stage`          | Approve the release candidate |
+| Release → production  | `main`    | `release`        | Publish production-ready code |
